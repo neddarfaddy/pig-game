@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#032620" />
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="main_header">
+      <nav class="main_nav">
+        <ul class="nav_list">
+          <li class="nav_left_side">
+            <img src="./imgs/web.png" alt="" />
+            <p>Shahin</p>
+          </li>
+          <li class="nav_right_side"><button class="game_button_rules">RULES</button></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- header -->
+
+
+    <!-- main overlay -->
+    <div class="background_overlay"></div>
+    <!-- main overlay -->
+
+     <!-- game information overlay -->
+     <div class="game_pop_up_overlay game_information_overlay">
+      <div class="game_pop_up_box game_information_box">
+        <h1>INSERT YOUR NAMES</h1>
+        <input class="player_name_value" type="text" placeholder="PLAYER 1 NAME">
+        <input  class="player_name_value"  type="text" placeholder="PLAYER 2 NAME"> 
+        <p class='hidden game_error_message'>Please Input your information correctly</p> 
+        <button class="game_button_start">START</button>
+      </div>
+    </div>
+    <!-- game information overlay -->
+
+    <!-- game rules overlay -->
+    <div class="hidden  game_pop_up_overlay game_rules_overlay">
+      <div class="game_pop_up_box game_rules_box">
+        <h1>RULES</h1>
+        <ul class="game_rules_list">
+          <li>• Two players take turns.</li>
+          <div class="game_rule_roll">
+            <li>• Roll the dice:</li>
+            <li class="spacing">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• 2–6 adds to your current
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;score.
+            </li>
+            <li class="spacing">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• 1 resets your current
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;score and switches turn.
+            </li>
+          </div>
+          <div class="game_rule_hold">
+            <li>• Click Hold to:</li>
+            <li class="spacing">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Add current score to total
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;score.
+            </li>
+          </div>
+          <div class="game_rule_end">
+            <li>• End your turn.</li>
+            <li class="spacing">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• First to 100 total points
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wins.
+            </li>
+          </div>
+        </ul>
+        <button class="game_button_close">CLOSE</button>
+      </div>
+    </div>
+    <!-- game rules overlay -->
+
+    <!-- game winner overlay -->
+    <div class="hidden game_pop_up_overlay game_result_overlay">
+      <div class="game_pop_up_box game_result_box">
+        <h1><span class="player_winner_name">FADDY</span><BR>HAS WON !</BR></h1> 
+       <img src="./imgs/happiness.png" alt="">
+        <button class="game_button_again">PLAY AGAIN</button>
+      </div>
+    </div>
+    <!-- game winner overlay --> 
+ 
+    <!-- game container overlay -->
+    <main class="hidden  main_container">
+      <div class="game_container">
+        <div class="game_player game_player_1">
+          <div class="game_player_name"><p  class="game_player_name_value">NAME</p></div>
+          <div class="game_player_interface">
+            <div class="game_player_stats">
+              <p>Score: <span  class="game_player_score game_player_one_score">0</span></p>
+              <p>Current: <span  class="game_player_current game_player_one_current">0</span></p>
+            </div>
+            <div class="game_player_dice">
+              <img class="game_player_one_dice" src="./imgs/dice1.png" alt="" />
+              <img class="hidden game_player_one_dice" src="./imgs/dice2.png" alt="" />
+              <img class="hidden game_player_one_dice" src="./imgs/dice3.png" alt="" />
+              <img class="hidden game_player_one_dice" src="./imgs/dice4.png" alt="" />
+              <img class="hidden game_player_one_dice" src="./imgs/dice5.png" alt="" />
+              <img class="hidden game_player_one_dice" src="./imgs/dice6.png" alt="" />
+
+            </div>
+          </div>
+        </div>
+        <div class="game_controls">
+          <button class="game_button_roll">ROLL</button>
+          <button class="game_button_hold">HOLD</button>
+        </div>
+        <div class="game_player game_player_2">
+          <div class="game_player_name"><p  class="game_player_name_value">NAME</p></div>
+          <div class="game_player_interface">
+            <div class="game_player_stats">
+              <p>Score: <span class="game_player_score game_player_two_score">0</span></p>
+              <p>Current: <span  class="game_player_current game_player_two_current">0</span></p>
+            </div>
+            <div class="game_player_dice">
+              <img class="game_dice game_player_two_dice" src="./imgs/dice1.png" alt="" />
+              <img class="hidden game_player_two_dice" src="./imgs/dice2.png" alt="" />
+              <img class="hidden game_player_two_dice" src="./imgs/dice3.png" alt="" />
+              <img class="hidden game_player_two_dice" src="./imgs/dice4.png" alt="" />
+              <img class="hidden game_player_two_dice" src="./imgs/dice5.png" alt="" />
+              <img class="hidden game_player_two_dice" src="./imgs/dice6.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main> 
+    <!-- game container overlay -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>

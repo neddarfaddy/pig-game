@@ -1,0 +1,323 @@
+/* FONTS */
+@font-face {
+  font-family: "Avgard";
+  src: url("./fonts/Avgard-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KHInterference";
+  src: url("./fonts/KHInterference.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avgard";
+  src: url("./fonts/Avgard-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Marathon";
+  src: url("./fonts/MarathonShapiro-Wide65.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MDN";
+  src: url("./fonts/MDN.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* global */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "MDN";
+  color: white;
+  font-size: 1.2rem;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+html {
+  background: linear-gradient(to bottom, #032620, #011415);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body {
+  background: linear-gradient(to bottom, #032620, #011415);
+  min-height: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+  padding-inline: 1rem;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #011415;
+  z-index: -2;
+}
+button {
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #90ff00;
+  border-radius: 150px;
+  padding: 15px 35px;
+  font-size: 0.8rem;
+  font-family: "KHInterference";
+}
+
+.hidden {
+  display: none !important;
+}
+
+.background_overlay {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+  width: 100%;
+  background-color: black;
+  z-index: 200;
+}
+/* header */
+.main_header * {
+  list-style-type: none;
+}
+.main_header {
+  top: 2%;
+  padding-inline: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+}
+.nav_list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_left_side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20;
+  gap: 0.3rem;
+}
+
+.nav_left_side img {
+  width: 30px;
+  aspect-ratio: 1/1;
+}
+
+/* hero */
+
+.main_container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding-top: 2.5rem;
+  margin-inline: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.game_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  gap: 1rem;
+}
+
+.game_player {
+  background-color: #0b312e;
+  width: 100%;
+  gap: 1rem;
+  border-radius: 50px;
+  flex-direction: column;
+  display: flex;
+  min-height: 230px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.7s ease-in-out;
+}
+
+.game_controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.game_player_name p {
+  font-size: 1.5rem;
+}
+.game_player_interface {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.game_player_interface * {
+  font-family: "KHInterference";
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.game_player_stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.game_player_stats p {
+  font-size: 0.9rem;
+}
+
+/* OVERLAYS GENERAL */
+.game_pop_up_overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 300;
+  padding-inline: 1.5rem;
+}
+
+.game_pop_up_overlay * {
+  font-family: "KHInterference";
+  color: white;
+}
+
+.game_pop_up_box {
+  background-color: #233d3cc7; /* More transparent version of your original color */
+  backdrop-filter: blur(10px); /* Creates the frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 1.5rem;
+  border-radius: 50px;
+  gap: 1rem;
+}
+
+/* rules */
+.game_rules_box h1 {
+  align-self: center;
+  font-family: "MDN";
+  font-size: 1.7rem;
+}
+
+.game_rules_list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.5rem;
+  gap: 1rem;
+  list-style-type: none;
+}
+
+.game_rules_list li {
+  font-size: 0.7rem;
+}
+
+.spacing {
+  line-height: 1rem;
+}
+.game_rules_box button {
+  width: 50%;
+}
+
+/* INFORMATION */
+.game_information_box {
+  gap: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.game_information_box h1 {
+  font-family: "MDN";
+  font-size: 1.4rem;
+}
+.game_information_box input {
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #90ff00;
+  border-radius: 100px;
+  padding: 0.7rem;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  font-family: "KHInterference";
+}
+input:focus {
+  outline: none;
+  box-shadow: none;
+  border: 2px solid #90ff00;
+}
+
+input::placeholder {
+  color: white;
+}
+
+.game_error_message {
+  font-size: 0.8rem;
+  text-align: center;
+  color: rgb(255, 0, 98);
+  line-height: 1.2rem;
+}
+
+/* WINNER */
+.game_result_box {
+  gap: 2rem;
+  padding: 3rem 0;
+  border-radius: 70px;
+}
+.game_result_box h1,
+.player_winner_name {
+  font-family: "MDN";
+  font-size: 2rem;
+  text-align: center;
+}
+
+.game_player_active {
+  background-color: #16635c;
+}
+
+.game_player_name_value {
+  text-transform: uppercase;
+}
+
+.game_player_dice img {
+  width: 120px;
+}
