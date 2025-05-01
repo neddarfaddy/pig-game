@@ -177,7 +177,7 @@ button {
 }
 .game_player_interface {
   display: flex;
-  gap: 1rem;
+  padding-inline: 2rem;
   width: 100%;
   justify-content: space-around;
   align-items: center;
@@ -191,7 +191,11 @@ button {
 .game_player_stats {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  height: 80%;
+  flex: 1;
+
+  justify-content: space-around;
+  align-items: start;
 }
 .game_player_stats p {
   font-size: 0.9rem;
