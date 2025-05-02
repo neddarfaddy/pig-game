@@ -13,6 +13,7 @@ let playerOneCurrent = document.querySelector(".game_player_one_current");
 let playerOneScore = document.querySelector(".game_player_one_score");
 let playerScores = document.querySelectorAll(".game_player_score");
 let playerCurrents = document.querySelectorAll(".game_player_current");
+let winnerMessage = document.querySelector(".player_winner_name");
 
 // BUTTONS
 const closeButton = document.querySelector(".game_button_close");
@@ -164,6 +165,11 @@ const winningLogic = function () {
 
   backgroundOverlay.classList.remove(CLASS_HIDDEN);
   popOverlay[2].classList.remove(CLASS_HIDDEN);
+  if (scores[0] > scores[1]) {
+    winnerMessage.textContent = playerOneName.toUpperCase();
+  } else {
+    winnerMessage.textContent = playerTwoName.toUpperCase();
+  }
 };
 
 //EVENT LISTENERS----------------------------------------------------

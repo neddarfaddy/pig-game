@@ -235,6 +235,10 @@ button {
   gap: 1rem;
 }
 
+.smiley {
+  width: 100px !important;
+}
+
 /* rules */
 .game_rules_box h1 {
   align-self: center;
